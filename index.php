@@ -36,7 +36,7 @@ $hotels = [
         'distance_to_center' => 50
     ],
 ]; 
-$park = $_GET['park'];?>
+$park = isset($_GET['park']) ? $_GET['park'] : '';?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -61,7 +61,7 @@ $park = $_GET['park'];?>
         <label for="vote">Voto</label>
         <input type="number" name="vote" id="vote">
 
-        <button type="button" class="btn btn-primary">Cerca</button>
+        <button type="submit" class="btn btn-primary">Cerca</button>
 
         <button type="button" class="btn btn-secondary">Annulla</button>
     </form>
