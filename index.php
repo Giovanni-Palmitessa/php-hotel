@@ -77,9 +77,7 @@ $hotels = [
         </thead>
         <tbody>
             <?php foreach ($hotels as $hotel) {
-                    foreach ($hotel as $informations) {
-                        
-                    }} ?>
+                    foreach ($hotel as $informations) { ?>
             <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
@@ -87,6 +85,7 @@ $hotels = [
                 <td>@mdo</td>
                 <td>@mdo</td>
             </tr>
+            <?php  }} ?>
         </tbody>
     </table>
 </body>
