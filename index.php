@@ -57,6 +57,8 @@
 
         <label for="vote">Voto</label>
         <input type="number" name="vote" id="vote">
+
+        <button type="button" class="btn btn-primary">Cerca</button>
     </form>
 </body>
 </html>
