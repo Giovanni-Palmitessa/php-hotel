@@ -76,16 +76,15 @@ $hotels = [
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($hotels as $hotel) {
-                    foreach ($hotel as $informations) { ?>
+            <?php foreach ($hotels as $hotel) {?>
             <tr>
-                <th scope="row"><?= $informations["name"] ?></th>
-                <td><?= $informations['description'] ?></td>
-                <td><?= $informations['parking'] ?></td>
-                <td><?= $informations['vote'] ?></td>
-                <td><?= $informations['distance_to_center'] ?></td>
+                <th scope="row"><?= $hotel["name"] ?></th>
+                <td><?= $hotel['description'] ?></td>
+                <td><?= $hotel['parking'] ?></td>
+                <td><?= $hotel['vote'] ?></td>
+                <td><?= $hotel['distance_to_center'] ?></td>
             </tr>
-            <?php  }} ?>
+            <?php } ?>
         </tbody>
     </table>
 </body>
