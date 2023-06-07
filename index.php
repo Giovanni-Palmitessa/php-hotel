@@ -47,7 +47,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <form action="" class="d-flex" style="gap:1.5rem">
+    <form action="" class="d-flex p-2" style="gap:1.5rem">
         <label for="select">Parcheggio</label>
         <select class="form-select w-25 align-items-center" aria-label="Default select example" id="select">
             <option selected>Scegli</option>
