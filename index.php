@@ -79,8 +79,8 @@ $hotels = [
             <?php foreach ($hotels as $hotel) {
                     foreach ($hotel as $informations) { ?>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
+                <th scope="row"><?php $informations['name'] ?></th>
+                <td><?php $informations['description'] ?></td>
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td>@mdo</td>
