@@ -35,7 +35,8 @@ $hotels = [
         'vote' => 2,
         'distance_to_center' => 50
     ],
-]; ?>
+]; 
+$park = $_GET['park'];?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -49,9 +50,9 @@ $hotels = [
 </head>
 
 <body>
-    <form action="" class="d-flex p-2" style="gap:1.5rem">
+    <form action="" class="d-flex p-2" style="gap:1.5rem" method="get">
         <label for="select">Parcheggio</label>
-        <select class="form-select w-25 align-items-center" aria-label="Default select example" id="select">
+        <select class="form-select w-25 align-items-center" aria-label="Default select example" id="select" name="park">
             <option selected>Scegli</option>
             <option value="true">Si</option>
             <option value="false">No</option>
@@ -93,6 +94,7 @@ $hotels = [
             <?php } ?>
         </tbody>
     </table>
+    <?php var_dump($park) ?>
 </body>
 
 </html>
