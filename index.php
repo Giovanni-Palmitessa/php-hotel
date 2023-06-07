@@ -83,7 +83,7 @@ $hotels = [
                 <td><?php $informations['description'] ?></td>
                 <td>Otto</td>
                 <td><?php $informations['vote'] ?></td>
-                <td>@mdo</td>
+                <td><?php $informations['distance_to_center'] ?></td>
             </tr>
             <?php  }} ?>
         </tbody>
