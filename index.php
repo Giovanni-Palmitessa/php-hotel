@@ -56,7 +56,7 @@
         </select>
 
         <label for="vote">Voto</label>
-        <input type="number" name="" id="vote">
+        <input type="number" name="vote" id="vote">
     </form>
 </body>
 </html>
