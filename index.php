@@ -59,6 +59,8 @@
         <input type="number" name="vote" id="vote">
 
         <button type="button" class="btn btn-primary">Cerca</button>
+
+        <button type="button" class="btn btn-secondary">Annulla</button>
     </form>
 </body>
 </html>
