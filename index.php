@@ -76,11 +76,17 @@ $hotels = [
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($hotels as $hotel) {?>
+            <?php foreach ($hotels as $key => $hotel) {?>
             <tr>
                 <th scope="row"><?= $hotel["name"] ?></th>
                 <td><?= $hotel['description'] ?></td>
-                <td><?= $hotel['parking'] ?></td>
+                <td><?php 
+                    if ($hotels[$key]['parking'] == true){ ?>
+                        SI <?php
+                    } else { ?>
+                        NO <?php
+                    };
+                ?></td>
                 <td><?= $hotel['vote'] ?></td>
                 <td><?= $hotel['distance_to_center'] ?></td>
             </tr>
