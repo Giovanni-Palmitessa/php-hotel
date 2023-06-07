@@ -94,7 +94,6 @@ $park = isset($_GET['park']) ? $_GET['park'] : '';?>
             <?php } ?>
         </tbody>
     </table>
-    <?php var_dump($park) ?>
 </body>
 
 </html>
