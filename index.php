@@ -36,7 +36,24 @@ $hotels = [
         'distance_to_center' => 50
     ],
 ]; 
-$park = isset($_GET['park']) ? $_GET['park'] : '';?>
+$park = isset($_GET['park']) ? $_GET['park'] : '';
+$vote = isset($_GET['vote']) ? $_GET['vote'] : '';
+
+// LOGICA PER FILTRO HOTEL
+
+if ($park === 'true') {
+    $filteredHotels = array_filter($hotels, function ($hotel) {
+        return $hotel['parking'] === true;
+    });
+} elseif ($park === 'false') {
+    $filteredHotels = array_filter($hotels, function ($hotel) {
+        return $hotel['parking'] === false;
+    });
+} else {
+    // Nessuna scelta di parcheggio, mostra tutti gli hotel
+    $filteredHotels = $hotels;
+}
+?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -77,7 +94,7 @@ $park = isset($_GET['park']) ? $_GET['park'] : '';?>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($hotels as $key => $hotel) {?>
+            <?php foreach ($filteredHotels as $key => $hotel) {?>
             <tr>
                 <th scope="row"><?= $hotel["name"] ?></th>
                 <td><?= $hotel['description'] ?></td>
