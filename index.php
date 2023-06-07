@@ -79,11 +79,11 @@ $hotels = [
             <?php foreach ($hotels as $hotel) {
                     foreach ($hotel as $informations) { ?>
             <tr>
-                <th scope="row"><?php $informations['name'] ?></th>
-                <td><?php $informations['description'] ?></td>
-                <td><?php $informations['parking'] ?></td>
-                <td><?php $informations['vote'] ?></td>
-                <td><?php $informations['distance_to_center'] ?></td>
+                <th scope="row"><?= $informations['name'] ?></th>
+                <td><?= $informations['description'] ?></td>
+                <td><?= $informations['parking'] ?></td>
+                <td><?= $informations['vote'] ?></td>
+                <td><?= $informations['distance_to_center'] ?></td>
             </tr>
             <?php  }} ?>
         </tbody>
