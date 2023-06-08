@@ -42,16 +42,17 @@ $vote = isset($_GET['vote']) ? $_GET['vote'] : '';
 // LOGICA PER FILTRO HOTEL
 
 if ($park === 'true') {
-    $filteredHotels = array_filter($hotels, function ($hotel) {
-        return $hotel['parking'] === true;
+    $filteredHotels = array_filter($hotels, function ($hotel) use ($vote) {
+        return $hotel['parking'] === true && $hotel['vote'] >= $vote;
     });
 } elseif ($park === 'false') {
-    $filteredHotels = array_filter($hotels, function ($hotel) {
-        return $hotel['parking'] === false;
+    $filteredHotels = array_filter($hotels, function ($hotel) use ($vote) {
+        return $hotel['parking'] === false && $hotel['vote'] >= $vote;
     });
 } else {
-    // Nessuna scelta di parcheggio, mostra tutti gli hotel
-    $filteredHotels = $hotels;
+    $filteredHotels = array_filter($hotels, function ($hotel) use ($vote) {
+        return $hotel['vote'] >= $vote;
+    });
 }
 ?>
 <!DOCTYPE html>
@@ -90,7 +91,7 @@ if ($park === 'true') {
                 <th scope="col">Descrizione</th>
                 <th scope="col">Parcheggio</th>
                 <th scope="col">Stelle</th>
-                <th scope="col">Distanza dal centro</th>
+                <th scope="col">Distanza dal centro (km)</th>
             </tr>
         </thead>
         <tbody>
